@@ -1,0 +1,21 @@
+{% load static %}
+{% load socialaccount %}
+<div id="navbar" >
+    <img id="logo-home" src="{% static 'images/icons/logo_black.png' %}">
+
+    <div id="nav-link">
+        <a href="" class="nav-item">About</a>
+        <a href="{% url 'shop' %}" class="nav-item">Shop</a>
+        
+        <a href="" class="nav-item">Gallery</a>
+        <a href="{% url 'cart' %}" class="nav-item">Cart</a>
+        <a href="" class="nav-item">Contacts</a>
+        {% if user.is_authenticated %}
+        <a href="">Welcome, {{ user.username }} !</a>
+        {% else %}
+        <a href="{% provider_login_url 'google' %}" class="nav-item">Account</a>
+        {% endif %}
+        
+        
+    </div>
+</div>

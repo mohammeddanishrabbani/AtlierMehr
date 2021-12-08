@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body
+{
+    height: 100vh;
+    width: 100vw;
+    border: 0%;
+    padding: 0%;
+    margin: 0%;
+    background-color: #fdf1ec;
+}
+
+#background-img {
+    height: 100vh;
+    width: 100vw;
+    position: fixed; 
+}
+
+#front {
+    height: fit-content;
+    width: 100%;
+}
+
+#continue {
+    position: absolute;
+    z-index: 2;
+    width: auto;
+    height: auto;
+    padding: 15px;
+    left: 85vw;
+    top: 85vh;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+}
+
+#connect-icons {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    left: 4vw;
+    top: 88vh;
+    gap: 2vw;
+}
+
+
+#logo{
+    position:absolute;
+    z-index: 3;
+    height: 12vh;
+    width: 8vw;
+    top: 12vh;
+    left: 45.5vw;
+}
+
+#logo-home {
+    height: 10vh;
+    width: 6vw;
+    left: 44vw;
+    top: 5vh;
+}
+
+#navbar
+{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    gap: 5vh;
+    top: 3vh;
+
+    margin-bottom: 2vw;
+}
+
+.nav-item {
+    margin-right: 2vw;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-item:hover{
+    color: rgb(241, 194, 156);
+}
+
+#shop
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+
+
+ 
+
+  .container img {
+    width: 20vw;
+    height: 20vh;
+    object-fit:cover;
+    
+    
+    
+    transform-origin:center;
+    transform:perspective(800px) rotateY(15deg);
+    transition:0.5s;
+  }
+ 
+  .container:hover img {
+    opacity:0.3;
+  }
+  .container img:hover {
+    transform:perspective(800px)       rotateY(0deg);
+    opacity:1;
+  }
+
+  .container
+  {
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+  }
+
+  .card{
+      height: 20vh;
+      width: 20vw;
+  }
+
+
+
+
+
+
+
+  body {
+    background-color: #fdf1ec;
+  }
+  
+  .wrapper {
+    height: 420px;
+    width: 654px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-img {
+    float: left;
+    height: 420px;
+    width: 327px;
+  }
+  
+  .product-img img {
+    border-radius: 7px 0 0 7px;
+  }
+  
+  .product-info {
+    float: left;
+    height: 420px;
+    width: 327px;
+    border-radius: 0 7px 10px 7px;
+    background-color: #ffffff;
+  }
+  
+  .product-text {
+    height: 300px;
+    width: 327px;
+  }
+  
+  .product-text h1 {
+    margin: 0 0 0 38px;
+    padding-top: 52px;
+    font-size: 34px;
+    color: #474747;
+  }
+  
+  .product-text h1,
+  .product-price-btn p {
+    font-family: 'Bentham', serif;
+  }
+  
+  .product-text h2 {
+    margin: 0 0 47px 38px;
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+  }
+  
+  .product-text p {
+    height: 125px;
+    margin: 0 0 0 38px;
+    font-family: 'Playfair Display', serif;
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+  
+  .product-price-btn {
+    height: 103px;
+    width: 327px;
+    margin-top: 17px;
+    position: relative;
+  }
+  
+  .product-price-btn p {
+    display: inline-block;
+    position: absolute;
+    top: -13px;
+    height: 50px;
+    font-family: 'Trocchi', serif;
+    margin: 0 0 0 38px;
+    font-size: 28px;
+    font-weight: lighter;
+    color: #474747;
+  }
+  
+  span {
+    display: inline-block;
+    height: 50px;
+    font-family: 'Suranna', serif;
+    font-size: 34px;
+  }
+  
+  .product-price-btn button {
+    float: right;
+    display: inline-block;
+    height: 50px;
+    width: 176px;
+    margin: 0 40px 0 16px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #9cebd5;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .product-price-btn button:hover {
+    background-color: #79b0a1;
+  }
+  
+  
+  
+  
+  
+  
+  

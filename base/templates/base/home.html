@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlier Mehr</title>
+    <link href="{% static 'styles/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    <div id="front">
+        <div>
+            <img id="background-img" src="{% static 'images/icons/5.jpg' %}">
+        </div>
+        <div>
+            <a id="continue" href="{% url 'main' %}">Continue to Website</a>
+        </div>
+    </div>
+    <div id="connect-icons">
+        <a href=""><img id="icon1" src="{% static 'images/icons/insta.png' %}"></a>
+        <a href=""><img id="icon1" src="{% static 'images/icons/mail.png' %}"></a>
+        <a href=""><img id="icon1" src="{% static 'images/icons/facebook.png' %}"></a>
+    </div>
+    <div style="text-align: center;">
+        <img id="logo" src="{% static 'images/icons/logo.png' %}">
+    </div>
+</body>
+</html>

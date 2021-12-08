@@ -1,0 +1,45 @@
+<html lang="en">
+{% load static %}
+<head>
+  <title>{{product.name}}</title>
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/shop.css' %}">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Bentham|Playfair+Display|Raleway:400,500|Suranna|Trocchi" rel="stylesheet">
+</head>
+
+<body>
+  {% include "base/navbar.html" %}
+  <div class="wrapper">
+    <div class="product-img">
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+      <img src="{{product.image.url}}" height="420" width="327">
+          </div>
+      {% for p in photos %}
+        <div class="mySlides fade">
+      <img src="{{p.images.url}}" height="420" width="327">
+          </div>
+          {% endfor %}
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+      
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1>{{product.name}}</h1>
+        <h2>Meher</h2>
+        <p>{{product.description}}</p>
+      </div>
+      <div class="product-price-btn">
+        <p><span>{{product.price}}</span>Rs</p>
+        <a href="{% url 'add-to-cart' product.id %}"><button type="button">Add to cart</button></a>
+      </div>
+    </div>
+  </div>
+  <script src="{% static 'js/shop.js' %}"></script>
+</body>
+
+</html>

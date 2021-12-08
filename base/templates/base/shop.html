@@ -1,0 +1,33 @@
+
+{% extends "base/main.html" %}
+{% load static %}
+
+{% block content %}
+<div id="shop">
+    <div id="choice">
+      <ul class="topics__list">
+        <li>
+            <a href="{% url 'shop' %}" class="active">All</a>
+        </li>
+        {% for topic in topics %}
+        <li>
+            <a href="{% url 'shop' %}?q={{topic.name}}">{{topic.name}}</a>
+        </li>
+        {% endfor %}
+
+    </ul>
+
+    </div>
+    <div id="cards">
+    <div class="container">
+        {% for product in products %}
+          
+        <div class="card">
+        <a href="{% url 'detail' product.id %}"><img src="{{product.image.url}}" alt=""></a>
+      </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+{% endblock content %}
+

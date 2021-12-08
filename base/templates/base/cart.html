@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>Shopping Cart UI</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/cart.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+</head>
+<body>
+    {% include "base/navbar.html" %}
+   <div class="CartContainer">
+   	   <div style="justify-content: center" class="Header">
+   	   	<h3 class="Heading">CART</h3>
+   	   
+   	   </div>
+          {% for order_item in object.items.all %}
+   	   <div class="Cart-Items">
+   	   	  <div class="image-box">
+   	   	  	<img style="border-radius: 10%;"  src="{{order_item.item.image.url}}" height="50vh" />
+   	   	  </div>
+   	   	  <div class="about">
+   	   	  	<h1 class="title">{{ order_item.item.name}}</h1>
+   	
+   	   
+   	   	  </div>
+   	   	  <div class="counter">
+   	   	  	<a style="text-decoration: none" href="{% url 'add-to-cart' order_item.item.id %}"><div class="btn">+</div></a>
+   	   	  	<div class="count">{{order_item.quantity}}</div>
+   	   	  	<a style="text-decoration: none" href="{% url 'remove_single_item_from_cart' order_item.item.id %}"><div class="btn">-</div></a>
+   	   	  </div>
+   	   	  <div class="prices">
+   	   	  	<div class="amount">${{order_item.get_final_price}}</div>
+   	   	  	
+   	   	  	<a href="{% url 'remove-from-cart' order_item.item.id %}"><div class="remove"><u>Remove</u></div></a>
+   	   	  </div>
+   	   </div>
+        {%endfor %}
+   	 <hr> 
+   	 <div class="checkout">
+   	 <div class="total">
+   	 	<div>
+   	 		<div class="Subtotal">Sub-Total</div>
+   	 		
+   	 	</div>
+   	 	<div class="total-amount">${{ object.get_total }}</div>
+   	 </div>
+   	 <button class="button">Checkout</button></div>
+   </div>
+</body>
+</html>
